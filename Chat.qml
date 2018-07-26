@@ -85,7 +85,7 @@ Page {
                 Row {
                     id: messageRow
 
-                    Image {
+                    RoundedAvatar {
                         id: avatar
                         source: !sentByMe ? "qrc:/images/" + modelData.author.avatar : ""
                         width: 50
@@ -105,6 +105,11 @@ Page {
                             anchors.margins: 12
                             wrapMode: Label.Wrap
                         }
+                    }
+                    RoundedAvatar {
+                        source: sentByMe ? "qrc:/images/" + modelData.author.avatar : ""
+                        width: 50
+                        height: 50
                     }
                 }
                 Label {
